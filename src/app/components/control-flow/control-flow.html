@@ -1,0 +1,74 @@
+<table>
+    <tr>
+        <td>
+            @if(isParagVisiable){
+            <p>This is a parag</p>
+            } @else {
+            <h3>isParagVisiable is false</h3>
+            }
+        </td>
+        <td>
+            <button (click)="showP()">Show</button>
+        </td>
+        <td>
+            <button (click)="hideP()">Hide</button>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            @if(startMonth === 'jan') {
+            <span>Jan</span>
+            } @else if(startMonth === 'feb') {
+            <span>Feb</span>
+            }
+        </td>
+        <td>
+            <input type="text" name="" id="" [(ngModel)]="startMonth">
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <ul>
+                @for (item of citiesList; track $index) {
+                <li>{{item}}</li>
+                }
+            </ul>
+        </td>
+        <td>
+            <select name="" id="">
+                @for (item of citiesList; track $index) {
+                <option value="">{{item}}</option>
+                }
+            </select>
+        </td>
+    </tr>
+</table>
+
+<br>
+
+<table>
+    <thead>
+        <tr>
+            <th>Sr No</th>
+            <th>Name</th>
+            <th>City</th>
+            <th>Status</th>
+        </tr>
+    </thead>
+    <tbody>
+        @for (item of studentList; track $index) {
+        <tr>
+            <td>{{$index+1}}</td>
+            <td>{{item.name}}</td>
+            <td>{{item.city}}</td>
+            <td>
+                @if (item.isActive) {
+                <h4>Active</h4>
+                } @else {
+                <h4>De-Active</h4>
+                }
+            </td>
+        </tr>
+        }
+    </tbody>
+</table>
