@@ -20,3 +20,48 @@
         <button class="btn btn-success" (click)="toogleDiv2Color()">Toogle BG Color</button>
     </div>
 </div>
+
+<div class="row">
+    <div class="col-3">
+        firstName => {{firstName}}
+        <br>
+        {{firstName | uppercase}}
+    </div>
+    <div class="col-3">
+        firstName => {{firstName}}
+        <br>
+        {{firstName | lowercase}}
+    </div>
+    <div class="col-3">
+        firstName => {{firstName}}
+        <br>
+        {{firstName | titlecase}}
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-3">
+        rollNoList => {{rollNoList}}
+        <br>
+        {{rollNoList | slice:0:3}}
+        <br>
+        {{rollNoList | slice:3}}
+    </div>
+    <div class="col-3">
+        studentObj => {{studentObj}}
+        <br>
+        {{studentObj | json}}
+    </div>
+
+    <div class="col-3">
+        curreDate => {{curreDate}}
+        <br>
+        {{curreDate | date}}
+        <br>
+        {{curreDate | date:'dd-MMM-yy'}}
+        <br>
+        {{curreDate | date:'dd-MM-yyyy'}}
+        <br>
+        {{curreDate | date:'dd-MMMM-yy'}}
+    </div>
+</div>
