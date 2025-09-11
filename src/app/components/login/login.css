@@ -1,0 +1,57 @@
+.login-card {
+    width: 100%;
+    max-width: 420px;
+    border: 0;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(22, 60, 80, 0.08);
+    overflow: hidden;
+}
+
+.login-card .card-body {
+    padding: 2rem;
+}
+
+.brand {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    margin-bottom: 1rem;
+}
+
+.brand .logo {
+    width: 48px;
+    height: 48px;
+    border-radius: 10px;
+    display: grid;
+    place-items: center;
+    background: linear-gradient(135deg, #4f46e5, #06b6d4);
+    color: #fff;
+    font-weight: 700;
+    font-size: 1.1rem;
+}
+
+.divider {
+    height: 1px;
+    background: #e9f0fb;
+    margin: 1.25rem 0;
+}
+
+.social-btn {
+    gap: .5rem;
+    font-weight: 500;
+}
+
+.form-control:focus {
+    box-shadow: 0 0 0 0.15rem rgba(99, 102, 241, 0.15);
+    border-color: #6366f1;
+}
+
+.small-muted {
+    color: #6b7280;
+}
+
+@media (max-width: 420px) {
+    .login-card {
+        border-radius: 8px;
+    }
+}

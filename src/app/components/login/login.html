@@ -1,0 +1,52 @@
+<main class="container px-3">
+    <div class="row justify-content-center">
+        <div class="col-12 col-md-8 col-lg-6">
+            <div class="card login-card mt-5">
+                <div class="card-body">
+                    <div class="brand">
+                        <div class="logo">A</div>
+                        <div>
+                            <h5 class="mb-0">Welcome back</h5>
+                            <div class="small-muted">Sign in to your account</div>
+                        </div>
+                    </div>
+                    <form action="#" method="post" novalidate>
+                        <div class="mb-3">
+                            <label for="email" class="form-label">Email address</label>
+                            <input type="email" [(ngModel)]="loginObj.userName" class="form-control" id="email"
+                                name="email" placeholder="you@example.com" required>
+                        </div>
+                        <div class="mb-3">
+                            <div class="d-flex justify-content-between align-items-center mb-1">
+                                <label for="password" class="form-label mb-0">Password</label>
+                                <a href="#" class="small">Forgot?</a>
+                            </div>
+                            <input type="password" [(ngModel)]="loginObj.password" class="form-control" id="password"
+                                name="password" placeholder="Enter your password" required>
+                        </div>
+                        <div class="d-flex justify-content-between align-items-center mb-3">
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="" id="remember">
+                                <label class="form-check-label small" for="remember">Remember me</label>
+                            </div>
+                            <div class="small-muted">Need an account? <a href="#">Sign up</a></div>
+                        </div>
+                        <button type="button" class="btn btn-primary w-100 mb-3" (click)="onLogin()">Sign in</button>
+                        <div class="text-center small-muted mb-3">or continue with</div>
+                        <div class="d-flex gap-2">
+                            <button type="button" class="btn btn-outline-secondary flex-fill social-btn">
+                                <i class="bi bi-google"></i> Google
+                            </button>
+                            <button type="button" class="btn btn-outline-secondary flex-fill social-btn">
+                                <i class="bi bi-github"></i> GitHub
+                            </button>
+                        </div>
+                        <div class="divider"></div>
+                        <div class="text-center small-muted small">By signing in you agree to our <a href="#">Terms</a>
+                            and <a href="#">Privacy Policy</a>.</div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>
